@@ -268,8 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('touchend', () => stopCircularHearts(item));
     });
     
-    // Кнопки и ссылки
-    const interactiveElements = document.querySelectorAll('.nav-link, .submit-btn, .countdown-item, .detail-card, .guest-detail-card');
+    // Кнопки и ссылки (ДОБАВЛЕНО: .rsvp-btn)
+    const interactiveElements = document.querySelectorAll('.nav-link, .submit-btn, .countdown-item, .detail-card, .guest-detail-card, .rsvp-btn');
     interactiveElements.forEach(item => {
         item.addEventListener('mouseenter', () => createCircularHearts(item));
         item.addEventListener('mouseleave', () => stopCircularHearts(item));
@@ -357,5 +357,3 @@ document.querySelectorAll('section > .container').forEach(section => {
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
-
-
